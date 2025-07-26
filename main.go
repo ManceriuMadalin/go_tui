@@ -46,7 +46,7 @@ func (m model) Init() tea.Cmd {
 }
 
 func convert(amount float64, from, to string) (float64, error) {
-	url := "https://v6.exchangerate-api.com/v6/7aa6ae231226b6befc728aa2/pair/" + from + "/" + to + "/" + strconv.FormatFloat(amount, 'f', 2, 64)
+	url := "https://v6.exchangerate-api.com/v6/" + "your key" +"/pair/" + from + "/" + to + "/" + strconv.FormatFloat(amount, 'f', 2, 64)
 
 	resp, err := http.Get(url)
 	if err != nil {
